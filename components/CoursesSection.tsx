@@ -93,17 +93,17 @@ const CRASH_COURSES = [
 
 export default function CoursesSection() {
   return (
-    <section id="courses" className="py-16 bg-[#f5f2eb] border-b border-stone-200">
+    <section id="courses" className="py-16 bg-gray-50 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-12">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#064e3b] block mb-2">
+          <span className="text-xs font-semibold uppercase tracking-wider text-[#0066ff] block mb-2 font-mono">
             Diploma & Certification Programs
           </span>
-          <h2 className="text-2xl sm:text-4xl font-bold text-stone-900 tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-bold text-gray-950 tracking-tight">
             Academic Courses Offered at ASPEC
           </h2>
-          <p className="mt-3 text-stone-700 text-base leading-relaxed">
+          <p className="mt-3 text-gray-600 text-base leading-relaxed">
             All diploma courses include hands-on computer lab sessions, syllabus textbooks, and an accredited verifiable completion certificate.
           </p>
         </div>
@@ -113,38 +113,38 @@ export default function CoursesSection() {
           {COURSES.map((course) => (
             <div
               key={course.code}
-              className="bg-white border border-stone-200 rounded-lg p-6 flex flex-col justify-between shadow-2xs"
+              className="bg-white border border-gray-200 rounded-lg p-6 flex flex-col justify-between hover:border-gray-300 transition-colors shadow-2xs"
             >
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm font-bold px-2.5 py-1 rounded bg-[#064e3b] text-white">
+                  <span className="text-xs font-mono font-bold px-2 py-0.5 rounded bg-[#0066ff] text-white">
                     {course.code}
                   </span>
-                  <span className="text-xs font-semibold px-2 py-0.5 rounded bg-amber-50 text-amber-900 border border-amber-200">
+                  <span className="text-xs font-medium px-2 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-200">
                     {course.duration}
                   </span>
                 </div>
 
-                <h3 className="text-lg font-bold text-stone-900 mb-2">
+                <h3 className="text-lg font-bold text-gray-950 mb-1.5">
                   {course.name}
                 </h3>
 
-                <p className="text-xs text-stone-500 mb-4 font-medium">
+                <p className="text-xs text-gray-500 mb-3.5 font-medium">
                   Eligibility: {course.eligibility}
                 </p>
 
-                <p className="text-sm text-stone-600 mb-5 leading-relaxed">
+                <p className="text-sm text-gray-600 mb-5 leading-relaxed">
                   {course.description}
                 </p>
 
-                <div className="border-t border-stone-100 pt-4 mb-6">
-                  <span className="text-xs font-semibold text-stone-700 block mb-2 uppercase tracking-wide">
+                <div className="border-t border-gray-100 pt-4 mb-6">
+                  <span className="text-xs font-semibold text-gray-700 block mb-2 uppercase tracking-wide">
                     Subjects Covered:
                   </span>
                   <ul className="space-y-1.5">
                     {course.syllabus.map((item, idx) => (
-                      <li key={idx} className="text-xs text-stone-600 flex items-start gap-2">
-                        <Check className="w-3.5 h-3.5 text-[#064e3b] shrink-0 mt-0.5" />
+                      <li key={idx} className="text-xs text-gray-600 flex items-start gap-2">
+                        <Check className="w-3.5 h-3.5 text-[#0066ff] shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -152,10 +152,10 @@ export default function CoursesSection() {
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-stone-200">
+              <div className="pt-4 border-t border-gray-100">
                 <a
                   href="#inquiry"
-                  className="w-full inline-block text-center py-2 px-4 rounded bg-stone-100 hover:bg-[#064e3b] hover:text-white text-stone-800 text-xs font-semibold border border-stone-300 transition-colors"
+                  className="w-full inline-block text-center py-2 px-3 rounded-md bg-gray-900 hover:bg-[#0066ff] text-white text-xs font-medium transition-colors"
                 >
                   Inquire for {course.code} Admission
                 </a>
@@ -165,29 +165,29 @@ export default function CoursesSection() {
         </div>
 
         {/* Short Crash Courses Section */}
-        <div className="mt-14 bg-white border border-stone-200 rounded-lg p-6 sm:p-8 shadow-2xs">
+        <div className="mt-14 bg-white border border-gray-200 rounded-lg p-6 sm:p-8 shadow-2xs">
           <div className="mb-6">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#064e3b] block mb-1">
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#0066ff] block mb-1 font-mono">
               Short-Term Practical Modules
             </span>
-            <h3 className="text-xl sm:text-2xl font-bold text-stone-900">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-950">
               Technical Crash Courses & Skill Workshops
             </h3>
-            <p className="text-sm text-stone-600 mt-1">
+            <p className="text-sm text-gray-600 mt-1">
               Short-duration intensive modules designed for rapid skill building in specific tools, accounting packages, and programming languages.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {CRASH_COURSES.map((crash, idx) => (
-              <div key={idx} className="p-4 bg-[#faf8f5] border border-stone-200 rounded-lg">
+              <div key={idx} className="p-4 bg-gray-50 border border-gray-200 rounded-md">
                 <div className="flex items-center justify-between gap-2 mb-1">
-                  <h4 className="text-sm font-bold text-stone-900">{crash.name}</h4>
-                  <span className="text-xs font-semibold text-stone-700 bg-white border border-stone-200 px-2 py-0.5 rounded shrink-0">
+                  <h4 className="text-sm font-bold text-gray-950">{crash.name}</h4>
+                  <span className="text-xs font-medium text-gray-600 bg-white border border-gray-200 px-2 py-0.5 rounded shrink-0">
                     {crash.duration}
                   </span>
                 </div>
-                <p className="text-xs text-stone-600">{crash.focus}</p>
+                <p className="text-xs text-gray-500">{crash.focus}</p>
               </div>
             ))}
           </div>
